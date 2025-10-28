@@ -1,0 +1,409 @@
+Phase 1 — Foundations & problem patterns (Days 1–30)
+
+Day 1 — Basic iteration patterns — Easy
+Task: Print numbers 1–100 in three ways (for-loop direct, while-loop, list comprehension).
+Exec: 1) Write three versions. 2) Time each with time module (microbenchmark). 3) Note readability vs speed.
+
+Day 2 — Sum / product patterns — Easy
+Task: Compute sum and product of a numeric list without using sum() or math.prod().
+Exec: 1) Implement simple for-loop accumulator. 2) Edge cases: empty list, zeros. 3) Test with random lists.
+
+Day 3 — Filtering patterns — Easy
+Task: Given numbers list, filter primes (naive).
+Exec: 1) Implement is_prime(n) simple check. 2) Use list comprehension to filter. 3) Test up to 100.
+
+Day 4 — Map / transform — Easy
+Task: Square all numbers then normalize (divide by max).
+Exec: 1) Map or comprehension to square. 2) Find max, divide; handle zero max. 3) Plot or print sample.
+
+Day 5 — Counting / frequency — Easy
+Task: Count occurrences of items in a list (without collections.Counter).
+Exec: 1) Use dict accumulator. 2) Output top-3 frequent items. 3) Test on mixed data.
+
+Day 6 — Two-sum pattern — Easy → Medium
+Task: Given list and target, find one pair that sums to target (O(n) using set).
+Exec: 1) Implement set-based solution. 2) Think about duplicates. 3) Add tests and edge cases.
+
+Day 7 — Sliding window intro — Medium
+Task: Max sum subarray of fixed length k (sliding window).
+Exec: 1) Implement window sum update. 2) Test with k values. 3) Compare naive vs sliding window.
+
+Day 8 — String reversal patterns — Easy
+Task: Reverse words in sentence (preserve word order vs reverse word order).
+Exec: 1) Implement split, reversed, join. 2) Handle extra spaces. 3) Add unit tests.
+
+Day 9 — Palindrome checks — Easy
+Task: Check if string (ignore spaces/punctuation/case) is palindrome.
+Exec: 1) Normalize string (regex or filters). 2) Two-pointer check. 3) Test with sample sentences.
+
+Day 10 — Merge two sorted lists — Medium
+Task: Merge two sorted arrays into one sorted array (no sort at end).
+Exec: 1) Two-pointer merge. 2) Handle unequal lengths. 3) Complexity analysis.
+
+Day 11 — Binary search practice — Medium
+Task: Implement binary search (iterative and recursive).
+Exec: 1) Implement both versions. 2) Edge cases: not found, duplicates. 3) Use for index finding & insertion position.
+
+Day 12 — Remove duplicates preserve order — Medium
+Task: Remove duplicates from list while preserving first occurrence order.
+Exec: 1) Use seen set + result list. 2) Test with strings and numbers. 3) Complexity check.
+
+Day 13 — Matrix basics — Medium
+Task: Transpose a matrix (list of lists).
+Exec: 1) Implement using nested loops and zip. 2) Handle non-square matrices. 3) Test.
+
+Day 14 — Frequency + window — Medium
+Task: Longest substring with at most K distinct characters (sliding window + dict).
+Exec: 1) Implement window expansion/shrink. 2) Track counts. 3) Test examples.
+
+Day 15 — Greedy pattern — Medium
+Task: Given coin denominations and amount, return min coins (greedy for canonical sets).
+Exec: 1) Implement greedy and test on canonical sets (e.g., [25,10,5,1]). 2) Show failing example for non-canonical.
+
+Day 16 — Recursion basics — Easy
+Task: Write recursive Fibonacci (and iterative for comparison).
+Exec: 1) Implement naive recursion; note exponential cost. 2) Implement DP/tabulation and memoization. 3) Compare timings.
+
+Day 17 — Backtracking intro — Medium
+Task: Generate all subsets (power set) of a small set.
+Exec: 1) Implement recursive backtracking. 2) Print count = 2^n. 3) Use for small n (<= 15).
+
+Day 18 — Permutations — Medium
+Task: Generate permutations of a string/list (no itertools).
+Exec: 1) Backtracking swap method. 2) Compare with itertools.permutations. 3) Note factorial growth.
+
+Day 19 — Merge intervals — Medium
+Task: Given list of intervals, merge overlapping ones.
+Exec: 1) Sort by start, iterate merging. 2) Output merged list. 3) Test edge cases.
+
+Day 20 — Top K elements — Medium
+Task: Return k largest elements from list (without sorting entire list).
+Exec: 1) Use heapq nlargest or manual min-heap of size k. 2) Test on random data. 3) Complexity.
+
+Day 21 — Validate parentheses — Easy
+Task: Check valid parentheses/brackets sequence.
+Exec: 1) Use stack. 2) Map closing->opening. 3) Test combos.
+
+Day 22 — Convert Roman numerals — Medium
+Task: Roman to integer and vice versa.
+Exec: 1) Map rules, iterate with lookahead. 2) Test many cases. 3) Edge cases invalid input.
+
+Day 23 — Linked-list concept (list emulation) — Medium
+Task: Implement singly linked list class with insert/delete/search.
+Exec: 1) Node class, List class. 2) Unit tests for operations. 3) Analyze complexity.
+
+Day 24 — Heap / priority queue basics — Medium
+Task: Use heap for stream median (maintain two heaps).
+Exec: 1) Implement two-heap approach. 2) Feed sequence and output medians. 3) Test.
+
+Day 25 — String pattern matching — Medium
+Task: Implement naive substring search; optional: KMP algorithm intro.
+Exec: 1) Naive sliding check. 2) If confident, implement prefix-function and KMP. 3) Benchmark.
+
+Day 26 — JSON / data parsing — Easy
+Task: Parse JSON file and extract nested fields, aggregate numeric stats.
+Exec: 1) Load sample JSON. 2) Walk nested dicts, sum numbers. 3) Handle missing keys.
+
+Day 27 — Error handling — Easy
+Task: Write robust function with try/except for IO and conversion errors.
+Exec: 1) Create function that reads numbers from file. 2) Catch parse errors. 3) Log and continue.
+
+Day 28 — File processing pipeline — Medium
+Task: Given CSV of records, filter, transform, and output new CSV.
+Exec: 1) Use csv module or pandas. 2) Design pipeline (filter, map, reduce). 3) Test on sample file.
+
+Day 29 — Debugging practice — Easy
+Task: Intentionally write buggy function; practice using debugger / print tracing to fix it.
+Exec: 1) Introduce off-by-one / None bug. 2) Use VS Code debugger / pdb. 3) Fix and explain bug.
+
+Day 30 — Review & mini-test — Medium
+Task: Solve 5 mixed problems from days 1–29 under timed conditions (e.g., 60–90 min).
+Exec: 1) Pick problems of varying difficulty. 2) Time yourself, then review solutions and optimize.
+
+Phase 2 — Algorithms & deeper patterns (Days 31–60)
+
+Day 31 — Sorting algorithms — Medium
+Task: Implement merge sort and quicksort (recursive).
+Exec: 1) Implement both. 2) Compare on random arrays. 3) Edge cases and stability note.
+
+Day 32 — Stable vs unstable sorts & complexity — Easy
+Task: Demonstrate stability and time/space tradeoffs with examples.
+Exec: 1) Create tuple keys to show stability. 2) Compare sorted() with custom key.
+
+Day 33 — Graph basics (BFS/DFS) — Medium
+Task: Implement BFS and DFS on adjacency list; find connected components.
+Exec: 1) Build graph sample. 2) BFS/DFS functions. 3) Use for shortest path in unweighted graph.
+
+Day 34 — Shortest path (Dijkstra) — Hard
+Task: Implement Dijkstra’s algorithm with heap.
+Exec: 1) Use adjacency list with weights. 2) Implement min-heap priority queue. 3) Test with example graphs.
+
+Day 35 — Topological sort — Medium
+Task: Implement topological sort (Kahn’s algorithm).
+Exec: 1) Build DAG sample. 2) Implement indegree queue. 3) Detect cycles.
+
+Day 36 — Dynamic programming intro — Medium
+Task: Classic: Longest Increasing Subsequence (LIS) n log n approach (or DP n^2).
+Exec: 1) Implement O(n^2) DP first. 2) If ready, implement patience sorting method.
+
+Day 37 — Knapsack (0/1) — Medium
+Task: Solve 0/1 knapsack with DP (weights small).
+Exec: 1) Table-based DP. 2) Reconstruct selected items. 3) Complexity.
+
+Day 38 — String DP (edit distance) — Hard
+Task: Compute Levenshtein distance between two strings.
+Exec: 1) Implement DP table. 2) Output distance and optionally edit sequence. 3) Test.
+
+Day 39 — Bit manipulation problems — Medium
+Task: Count set bits, single number (xor) problems.
+Exec: 1) Implement bit tricks, n & (n−1) trick. 2) Solve small problems.
+
+Day 40 — Union-Find (Disjoint Set) — Medium
+Task: Implement union-find with path compression; use to count connected components.
+Exec: 1) Implement uf class. 2) Apply to sample edges. 3) Analyze.
+
+Day 41 — Matrix traversal — Medium
+Task: Spiral order traversal of matrix.
+Exec: 1) Implement layer-by-layer peel. 2) Test square and rectangular matrices.
+
+Day 42 — Word ladder / BFS on words — Hard
+Task: Transform word A → B changing one letter at a time; min steps via BFS on implicit graph.
+Exec: 1) Precompute neighbors or try wildcard mapping. 2) BFS for shortest path.
+
+Day 43 — Interval scheduling / optimization — Medium
+Task: Max non-overlapping intervals (activity selection).
+Exec: 1) Greedy by end-time. 2) Prove correctness by reasoning.
+
+Day 44 — Reservoir sampling (streaming) — Hard
+Task: Implement reservoir sampling to pick k items uniformly from stream of unknown length.
+Exec: 1) Implement algorithm. 2) Simulate stream and test distribution.
+
+Day 45 — Randomized algorithms basics — Medium
+Task: Implement randomized quickselect for kth smallest.
+Exec: 1) Implement partition-based quickselect. 2) Average complexity discussion.
+
+Day 46 — Median of medians (selection) — Hard
+Task: (Optional) implement deterministic linear-time selection or study why it’s complex.
+Exec: 1) If confident, implement; otherwise, read and outline algorithm steps.
+
+Day 47 — Advanced sliding window — Medium
+Task: Minimum window substring (contains all chars from t).
+Exec: 1) Implement counts + window expand/shrink. 2) Test.
+
+Day 48 — Trie (prefix tree) — Medium
+Task: Implement trie for insert/search/prefix count.
+Exec: 1) Node children dict. 2) Use for autocomplete examples.
+
+Day 49 — Caching / LRU cache — Medium
+Task: Implement LRU cache class (use OrderedDict or double-linked + hashmap).
+Exec: 1) Implement get/put. 2) Test eviction policy.
+
+Day 50 — Regular expressions in problems — Easy
+Task: Extract structured data (emails, phone numbers) from free text using re.
+Exec: 1) Craft regex patterns. 2) Test on sample text.
+
+Day 51 — Advanced recursion — Medium
+Task: Solve N-Queens backtracking and count solutions for N up to 12.
+Exec: 1) Implement row-by-row backtracking with bitmasks if confident. 2) Count solutions.
+
+Day 52 — Game theory / minimax intro — Medium
+Task: Implement simple minimax for Tic-Tac-Toe (no alpha-beta) to play optimally.
+Exec: 1) Represent board, winning checks. 2) Recursively evaluate moves.
+
+Day 53 — Concurrency basics (conceptual + simple threads) — Easy
+Task: Write program that starts multiple threads to compute chunks of a large sum and join.
+Exec: 1) Use threading or concurrent.futures.ThreadPoolExecutor. 2) Discuss GIL and CPUs.
+
+Day 54 — Memoization patterns — Easy
+Task: Memoize expensive recursive function (e.g., count ways stairs).
+Exec: 1) Implement decorator lru_cache vs manual cache. 2) Benchmark.
+
+Day 55 — Stream processing patterns — Medium
+Task: Process large file line-by-line, compute running stats (mean/variance) online.
+Exec: 1) Use streaming algorithms (Welford’s method). 2) Low memory usage.
+
+Day 56 — Back-of-envelope complexity — Easy
+Task: Given 10 code snippets, determine time & space complexity.
+Exec: 1) Practice Big-O reasoning. 2) Explain each in plain English.
+
+Day 57 — Advanced graph (SCC) — Hard
+Task: Find strongly connected components (Kosaraju or Tarjan).
+Exec: 1) Implement Tarjan’s algorithm. 2) Test with directed graphs.
+
+Day 58 — Flow basics (conceptual) — Hard
+Task: Understand max-flow min-cut; implement basic Edmonds–Karp (optional).
+Exec: 1) If comfortable, implement BFS-based augmenting path. 2) Example network.
+
+Day 59 — Optimization problems — Medium
+Task: Implement greedy + DP hybrid for weighted interval scheduling (DP with binary search).
+Exec: 1) Sort intervals. 2) DP table + binary search predecessor.
+
+Day 60 — Review & timed contest — Medium → Hard
+Task: Attempt 2–3 moderate algorithmic problems under time pressure (e.g., 90 mins).
+Exec: 1) Pick problems, time yourself. 2) After solving, write a short postmortem: what was hard, what to practice.
+
+Phase 3 — Real-world mini-projects (Days 61–80)
+
+Day 61 — CLI todo app (part 1) — Medium
+Task: Build minimal CLI todo list: add/list/remove tasks stored in JSON.
+Exec: 1) Design commands. 2) Read/write JSON file safely. 3) Implement add/list/remove.
+
+Day 62 — CLI todo app (part 2) — Medium
+Task: Add due dates, filtering, and persistence; unit tests.
+Exec: 1) Add date parsing & filter by due. 2) Unit tests for features. 3) Error handling.
+
+Day 63 — Web scraper basics — Medium
+Task: Scrape headlines from a simple site (respect robots.txt — use test site).
+Exec: 1) Use requests + BeautifulSoup. 2) Parse HTML and extract. 3) Save to CSV.
+
+Day 64 — Scraper + DB pipeline — Medium
+Task: Save scraped results into SQLite.
+Exec: 1) Create SQLite schema. 2) Insert deduplicated entries. 3) Query stored data.
+
+Day 65 — Simple REST API (Flask/FastAPI) — Medium
+Task: Expose endpoints to list/add todo items (connect to SQLite).
+Exec: 1) Build API with endpoints GET/POST/DELETE. 2) Test with curl or Postman.
+
+Day 66 — Data cleaning mini-project — Medium
+Task: Take messy CSV, clean, normalize, and output clean CSV.
+Exec: 1) Identify issues (missing, types). 2) Fill/drop/transform. 3) Document rules.
+
+Day 67 — ETL pipeline — Medium → Hard
+Task: Build small ETL: read CSV → transform → load into DB with logs.
+Exec: 1) Modularize Extract/Transform/Load steps. 2) Add idempotency and logging.
+
+Day 68 — Simple recommender prototype — Hard
+Task: Build item-based or popularity-based recommender from user-item interactions.
+Exec: 1) Compute co-occurrence or popularity. 2) Serve recommendations for a user.
+
+Day 69 — Image classifier (transfer learning) — Hard
+Task: Fine-tune small model on tiny dataset (use tensorflow.keras or torch).
+Exec: 1) Use pre-trained model, replace head. 2) Train on small set, evaluate. 3) Save model.
+
+Day 70 — CLI data visualizer — Medium
+Task: Read CSV and generate simple plots (matplotlib) saved as PNG.
+Exec: 1) Implement chosen charts. 2) Save figures to disk.
+
+Day 71 — Text processing pipeline — Medium
+Task: Tokenize, normalize, and vectorize small corpus (bag of words).
+Exec: 1) Preprocess steps (lowercase, remove stopwords). 2) Build frequency vectors.
+
+Day 72 — Simple chatbot (rule-based) — Medium
+Task: Build simple keyword-based chatbot CLI that responds to user intents.
+Exec: 1) Define rules/intent patterns. 2) Implement matching and responses. 3) Add fallback.
+
+Day 73 — Sentiment analysis prototype — Hard
+Task: Train small classifier on labeled data (or use pretrained) to classify sentiment.
+Exec: 1) Vectorize text (TF-IDF). 2) Train simple model (sklearn). 3) Evaluate.
+
+Day 74 — Scheduler / cron simulator — Medium
+Task: Implement scheduler that runs tasks at given intervals (simulate).
+Exec: 1) Parse schedule expressions. 2) Use threading/async or simulate time loop.
+
+Day 75 — CSV import UI (web) — Medium
+Task: Build simple web page to upload CSV, preview, and commit to DB.
+Exec: 1) Frontend form + backend POST. 2) Parse file and show preview. 3) Commit on confirm.
+
+Day 76 — Email sender utility — Medium
+Task: Send templated emails to a list (use SMTP test server).
+Exec: 1) Template rendering (Jinja2). 2) Batch sending with rate-limit. 3) Logging and retry.
+
+Day 77 — Image processing script — Medium
+Task: Resize, crop, and convert images in folder (Pillow).
+Exec: 1) Batch process files. 2) Keep originals or backup. 3) Add CLI flags.
+
+Day 78 — Unit testing & CI basics — Medium
+Task: Add unit tests for one project; set up simple GitHub Actions workflow.
+Exec: 1) Write tests with pytest. 2) Create .github/workflows/python.yml. 3) Push and verify CI run.
+
+Day 79 — Profiling & optimization — Medium
+Task: Profile a slow function and optimize (algorithmic improvement or micro-optimizations).
+Exec: 1) Use cProfile and pstats. 2) Identify hotspots. 3) Refactor and measure improvement.
+
+Day 80 — Project review & documentation — Medium
+Task: Choose one project from days 61–79 and write README, usage, and TODOs.
+Exec: 1) Add examples, setup steps. 2) Create issues for next features. 3) Publish to GitHub.
+
+Phase 4 — Databases & integration (Days 81–90)
+
+Day 81 — SQL basics — Easy
+Task: Create SQLite DB, table, insert, select queries.
+Exec: 1) Use sqlite3 module. 2) Practice basic SELECT, WHERE, ORDER BY. 3) Test.
+
+Day 82 — Joins & aggregation — Medium
+Task: Build two tables (users, orders) and write queries using JOIN, GROUP BY.
+Exec: 1) Insert sample data. 2) Write aggregate queries (sum per user).
+
+Day 83 — Indexing & performance — Medium
+Task: Add indexes and profile query speed.
+Exec: 1) Create index on search column. 2) Compare query times before/after.
+
+Day 84 — ORM basics (SQLAlchemy) — Medium
+Task: Model tables with SQLAlchemy and perform CRUD via ORM.
+Exec: 1) Define models. 2) Create session, add, query, update.
+
+Day 85 — Migrations & schema changes — Medium
+Task: Use Alembic (or simple migration script) to alter schema safely.
+Exec: 1) Add column via migration. 2) Migrate sample DB.
+
+Day 86 — Transactions & concurrency — Medium
+Task: Demonstrate transaction atomicity and rollbacks on failures.
+Exec: 1) Wrap operations in transaction. 2) Force exception and observe rollback.
+
+Day 87 — Build small API with persistent DB — Hard
+Task: Build API (FastAPI) that interacts with DB (users & posts).
+Exec: 1) Create endpoints CRUD. 2) Add validation and error handling. 3) Test with HTTP client.
+
+Day 88 — Authentication basics — Medium
+Task: Add simple token-based auth to your API (JWT or simple token).
+Exec: 1) Implement login route returning token. 2) Protect endpoints. 3) Test flows.
+
+Day 89 — Data migration & ETL to DB — Medium
+Task: ETL large CSV into DB with batching and resume capability.
+Exec: 1) Implement chunked inserts. 2) Use transactions and checkpoints.
+
+Day 90 — Backup & restore — Easy
+Task: Implement DB backup/restore scripts (dump & load).
+Exec: 1) Export data to file. 2) Restore into new DB and verify.
+
+Phase 5 — Capstone projects & synthesis (Days 91–100)
+
+Day 91 — Capstone planning — Medium
+Task: Design a capstone project that combines AI + DB + simple web interface (e.g., sentiment dashboard, image classifier uploader, recommendation engine).
+Exec: 1) Define scope, MVP features. 2) Break into weekly tasks. 3) Setup repo and skeleton.
+
+Day 92 — Data collection & schema — Medium
+Task: Collect or synthesize dataset for capstone; design DB schema.
+Exec: 1) Gather data or scrape/collect. 2) Normalize and store in DB.
+
+Day 93 — Model prototype — Hard
+Task: Train basic model for your capstone (classification/regression).
+Exec: 1) Quick experiments with small subset. 2) Save best model and metrics.
+
+Day 94 — Model evaluation & validation — Medium
+Task: Create validation set, compute metrics, confusion matrix, ROC if relevant.
+Exec: 1) Evaluate and document results. 2) Iterate on features.
+
+Day 95 — Integrate model into API — Hard
+Task: Create endpoint that accepts input and returns model prediction.
+Exec: 1) Load saved model in API. 2) Implement input validation. 3) Test end-to-end.
+
+Day 96 — UI for capstone (web or CLI) — Medium
+Task: Build minimal UI to interact with API (upload, view results).
+Exec: 1) Simple HTML/JS front or CLI client. 2) Connect to API and handle responses.
+
+Day 97 — Logging, monitoring, error handling — Medium
+Task: Add structured logging, error pages, and basic health endpoint.
+Exec: 1) Implement logging to file/console. 2) Add /health route.
+
+Day 98 — Deployment prep — Medium
+Task: Dockerize app, write Dockerfile and docker-compose for DB + app.
+Exec: 1) Create Docker images. 2) Test locally with Compose.
+
+Day 99 — Publish & document — Medium
+Task: Finalize README, usage, screenshots, and publish repo (GitHub).
+Exec: 1) Add license, contribution guide. 2) Tag a release.
+
+Day 100 — Retrospective & next steps — Easy → Medium
+Task: Write a 1-page retrospective: what you learned, strengths, weak spots, and a 90-day follow-up plan (focus areas).
+Exec: 1) Summarize accomplishments. 2) Identify topics for improvement. 3) Plan real-job / portfolio next steps.
